@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Debts Highlighter</title>
+<style>
+  :root{
+    --navy:#0C2D57;
+    --sky:#57C3E6;
+    --bg:#F5F8FC;
+    --card:#FFFFFF;
+    --muted:#6B7A90;
+    --border:#E2E8F0;
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--navy);
+    background:linear-gradient(180deg,var(--bg),#fff 120%);
+  }
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:32px 20px 60px;
+  }
+  header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:18px 0 10px;
+    border-bottom:1px solid var(--border);
+    margin-bottom:22px;
+  }
+  .logo{
+    width:38px;height:38px;border-radius:12px;
+    display:grid;place-items:center;
+    background: radial-gradient(120% 120% at 0% 0%, var(--sky), #7fd5ee);
+    box-shadow:0 4px 14px rgba(12,45,87,.12) inset, 0 2px 10px rgba(12,45,87,.08);
+  }
+  .logo svg{width:22px;height:22px;fill:white;opacity:.96}
+  h1{font-size:28px;line-height:1.15;margin:0}
+  h2{font-size:20px;margin:26px 0 10px}
+  p{line-height:1.65;margin:10px 0;color:var(--navy)}
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 6px 24px rgba(12,45,87,.06);
+  }
+  .pill{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:999px;
+    background:rgba(87,195,230,.15);
+    color:var(--navy);
+    font-weight:600;
+    letter-spacing:.2px;
+    border:1px solid rgba(87,195,230,.35);
+  }
+  .muted{color:var(--muted)}
+  footer{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    border-top:1px dashed var(--border);
+    padding-top:16px;
+  }
+  a{color:var(--sky);text-decoration:none}
+  a:hover{text-decoration:underline}
+  @media (max-width:600px){
+    h1{font-size:24px}
+    .card{padding:18px}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" aria-label="Debts Highlighter">
+          <path d="M12 2a3.3 3.3 0 1 1 0 6.6A3.3 3.3 0 0 1 12 2Zm0 7.9c3.83 0 6.94 3.1 6.94 6.94 0 2.45-1.26 4.62-3.17 5.9a1.3 1.3 0 0 1-1.8-.37l-2.57-3.9a.7.7 0 0 0-1.15 0l-2.58 3.9a1.3 1.3 0 0 1-1.79.38A6.97 6.97 0 0 1 5.06 16.8c0-3.84 3.1-6.94 6.94-6.94Z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pill">Debts Highlighter</div>
+        <h1>Privacy Policy</h1>
+        <div class="muted" id="date">Effective Date: <span></span></div>
+      </div>
+    </header>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Debts Highlighter is a Chrome extension that lets you highlight specific words, phrases, and small numeric values (0–249) on web pages. All processing happens <strong>locally on your device</strong>. No personal information is collected, stored, or transmitted to any external server.</p>
+
+      <h2>Data We Access</h2>
+      <p><strong>Website Content:</strong> visible text on the web pages you visit, only for the purpose of applying highlights that you configure.</p>
+
+      <h2>Data We Do Not Collect</h2>
+      <p>We do not collect: personally identifiable information, financial or payment data, authentication credentials, location, browsing history, or user activity such as clicks or keystrokes.</p>
+
+      <h2>Data Storage</h2>
+      <p>The extension stores only your highlight groups and phrases, highlight colors, toggle (on/off) state, and a local password for the popup. This information is saved in <code>chrome.storage.local</code> within your browser and never leaves your device.</p>
+
+      <h2>Data Sharing</h2>
+      <p>We do not share, sell, or transfer your data to any third parties.</p>
+
+      <h2>Security</h2>
+      <p>Because all data is processed locally and not sent over the internet, the risk of interception or misuse is minimized.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>If this policy changes, we will update the “Effective Date” and publish the new version at the same URL.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email us at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> Debts Highlighter. All rights reserved.
+    </footer>
+  </div>
+
+<script>
+  const d = new Date();
+  document.querySelector('#date span').textContent =
+    d.toLocaleDateString(undefined, { year:'numeric', month:'long', day:'numeric' });
+  document.getElementById('year').textContent = d.getFullYear();
+</script>
+</body>
+</html>
